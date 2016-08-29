@@ -1,3 +1,6 @@
+# ignore packages installed by npm
 node_modules
 
 .env
+
+credentials.js

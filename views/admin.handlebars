@@ -1,0 +1,32 @@
+<div class="container">
+<div class="row">
+<div class="col-xs-12">
+<h1 class="text-center">ANDELA ASSETS</h1>
+<div class="table-responsive">
+<table class="table  table-striped table-hover">
+<thead>
+<tr>
+	<th>Code</th>
+	<th>Serial No</th>
+	<th>Name</th>
+	<th>Quantity</th>
+	<th>Date Purchased</th>
+</tr>
+</thead>
+<tbody>
+ {{#each rows}}
+ <tr>
+ <td>{{this.code}}</td>
+ <td>{{this.serial}}</td>
+ <td>{{this.name}}</td>
+ <td>{{this.quantity}}</td>
+ <td>{{this.purchased}}</td>
+ </tr>
+ {{/each}}
+</tbody>
+</table>
+</div>
+</div>
+
+</div>
+</div>
