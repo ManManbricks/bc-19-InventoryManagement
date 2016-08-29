@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link rel="icon" href="#" />
+    <title>IMS (Inventory Management System)</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/style/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    {{#if showTests}}
+        <link rel="stylesheet" href="/vendor/mocha.css">
+    {{/if}}
+     <script  src="/style/jquery/dist/jquery.min.js"></script>
+    <script src="/style/bootstrap/dist/js/bootstrap.min.js"></script>
+   
+    <link href='//fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css' />
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="/style/cover.css" rel="stylesheet" />
+</head>
+<body>
+ <div class="topcolor">
+    <div class="container">
+ <ul class="nav nav-pills">
+         {{#if logged}}        
+         
+          <li><a href="/signout" class="btn-link"><span class="glyphicon glyphicon-log-out"></span>&nbsp; Sign-out</a></li>
+           <li class="text-capitalize message"><b>Welcome!</b> {{logged.username}} </li>
+          {{else}}
+           <li><a href="/login" class="btn-link"><span class="glyphicon glyphicon-log-in"></span>&nbsp; Sign-In</a></li>
+          <li><a href="/register" class="btn-link btn-primary"><span class="glyphicon glyphicon-user"></span>&nbsp; Sign Up</a></li>       
+           
+          {{/if}}
+         </ul>
+       </div>
+  </div>
+  <div class="header">
+
+     <div class="container">
+      <div class="row">
+         
+           
+      </div>
+      <div class="row">
+        <h1 class="text-uppercase">IMS - Inventory Management System</h1>
+      </div>
+    </div>
+  </div>
+   {{#if logged}}        
+         
+         <nav class="navbar navbar-default">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+              </button>
+             <a class="navbar-brand" href="/admin"><span class="glyphicon glyphicon-home"></span></a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">ASSETS <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                  <li><a href="/add/asset"><span class="glyphicon glyphicon-plus"></span>&nbsp; ADD ASSET</a></li>
+                  <li><a href="/admin"><span class="glyphicon glyphicon-eye-open"></span>&nbsp; VIEW ALL ASSETS</a></li>
+              </ul> 
+              </li>
+               <li><a href="#">HOme</a></li>
+                <li><a href="#">HOme</a></li>
+                 <li><a href="#">HOme</a></li>
+            </ul>
+          </div>
+          </div>
+
+         </nav>
+           
+  {{/if}}
+
+      {{{body}}}
+<div class="footer">
+              <hr />
+               <div class="container">
+                <div class="row">
+                     <div class="text-center">
+                        <p>Copyright &copy; 2016 BootCamp Project BY CALLISTUS A.K.A ManMan Bricks . All Rights Reserved</p>
+                    </div>
+                </div>
+               </div>
+            </div>
+    
+    {{#if showTests}}
+        <div id="mocha"></div>
+        <script src="/vendor/mocha.js"></script>
+        <script src="/vendor/chai.js"></script>
+        <script>
+            mocha.ui('tdd');
+            var assert = chai.assert;
+        </script>    
+        <script src="/qa/tests-global.js"></script>
+            {{#if pageTestScript}}
+                <script src="{{pageTestScript}}"></script>
+            {{/if}}
+            <script>mocha.run();</script>
+    {{/if}}   
+</body>
+</html>

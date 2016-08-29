@@ -1,0 +1,90 @@
+body{
+
+	background-color: #fff;
+}
+
+.header{
+	
+	padding: 20px 0 23px 0;
+	color:#767676;
+	background-color: #fff;
+	background-clip: padding-box;
+	border-bottom: 1px solid rgba(0,0,0,0.075);
+	box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.footer{
+	
+	color:#767676;
+	padding:2em 0 2em 0;	
+}
+
+.topcolor{
+
+    margin:0;
+    padding: 2px 0;
+	background-color: #878787;
+}
+
+.topcolor ul li{
+	float: right;
+}
+
+.topcolor .btn-link{
+   
+	color: #fff;
+
+}
+
+.message{
+	padding-top:6px;
+	color:#fff;
+	font-size: 1.3em;
+}
+
+.topcolor .btn-link:hover{
+
+   text-decoration: underline;
+   color:#f8f7f7;
+   background: none;	
+}
+a.wei{
+	font-weight: 700;
+}
+
+.header h1{
+	font-weight: 900 !important;
+}
+
+.checkbox.in{
+	display:inline-block;
+}
+
+.loginwrap{
+
+	 max-width: 400px;
+	 padding: 10px 20px;
+	 margin: auto;
+	  background-color:#f8f7f7;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    border: 1px solid #ebebeb;
+    margin-top: 5.5em;
+    margin-bottom: 5.5em;
+}
+
+.btn.btn-default{
+	 background-color: #337ab7;
+    border-color: #2e6da4;
+    font-weight:600;
+    color: #fff;
+}
+
+.btn.btn-default:hover{
+	background-color: #286090;
+        border-color: #204d74;
+}
+
+h2.text-primary{
+	color: #767676;
+}

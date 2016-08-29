@@ -1,0 +1,51 @@
+  <div>
+       
+            <div class="container">
+               <div class="row">
+              
+                <form action="/login" method="POST" class="form-horizontal loginwrap">
+                {{#if flash}}
+<div class="alert alert-dismissible alert-{{flash.type}}">
+<button type="button" class="close"
+data-dismiss="alert" aria-hidden="true">&times;</button>
+<strong>{{flash.intro}}</strong> {{{flash.message}}}
+</div>
+{{/if}}
+                   <h2 class="text-center text-primary"><span class="glyphicon glyphicon-user"></span>&nbsp;<b>LOGIN</b></h2>
+                   <hr />
+                    <div class="form-group">
+                        <label class="control-label sr-only" for="email">Email:</label>
+                        <div class="col-xs-12">
+                            <input type="text" name="username" value="{{#if flash}}{{flash.name}}{{/if}}" class="form-control" id="email" placeholder="Enter email or username">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label sr-only" for="pwd">Password:</label>
+                        <div class="col-xs-12">
+                            <input type="password" name="password" class="form-control" id="pwd" placeholder="Enter password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        
+                         <div class="col-xs-offset-0 col-xs-12 text-right">
+                              <div class="checkbox in">
+                                <label>
+                                    <input name="remember" type="checkbox">
+                                    <b>Remember me</b> &nbsp;</label>
+                            </div><button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-log-in"></span>&nbsp; Sign-In</button>
+                             <hr />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                     
+                       <div class="col-xs-6 wei">
+                       <a href="/changepassword" class="wei">Forgot Your Password</a>
+                     </div>
+                     <div class="col-xs-6 text-right"><a href="" class="wei">Create An Account</a></div>
+                    </div>
+                </form>
+              </div>
+                
+                </div>
+
+            </div>

@@ -17,7 +17,18 @@
   },
   "homepage": "https://github.com/ManManbricks/bc-19-InventoryManagement#readme",
   "dependencies": {
+    "body-parser": "^1.15.2",
     "bootstrap": "^3.3.7",
-    "express": "^4.14.0"
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.1",
+    "express": "^4.14.0",
+    "express-mysql-session": "^1.1.1",
+    "express-session": "^1.14.1",
+    "express3-handlebars": "^0.5.2",
+    "express4-handlebars": "^0.2.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2"
   }
 }
